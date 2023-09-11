@@ -7,7 +7,9 @@
           alt="Pharmacy Logo"
           class="w-12 h-12 rounded-full"
         />
-        <h1 class="text-white text-2xl font-semibold">Your Pharmacy</h1>
+        <h1 class="text-white text-2xl font-semibold">
+          M Pharmacy صيدليه د/مؤمن لطفي
+        </h1>
       </div>
     </div>
   </header>
@@ -110,6 +112,7 @@ export default {
 
       // Filter drugs with a value greater than 0
       const filteredDrugs = this.drugs.filter((drug) => drug.value > 0);
+      pdf.text("M Pharmacy | Dr.Momen Lotfy", 14, 10);
 
       // Define the table headers
       const headers = [["Drug Name", "Value"]];
@@ -121,10 +124,18 @@ export default {
       pdf.autoTable({
         head: headers,
         body: data,
-        startY: 10, // Initial y-coordinate for the table
+        startY: 15,
+        // Initial y-coordinate for the table
       });
-
-      pdf.save("drugs.pdf");
+      const date = new Date();
+      const options = {
+        weekday: "short",
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      };
+      const formattedDate = date.toLocaleDateString(undefined, options);
+      pdf.save(`${formattedDate}.pdf`);
     },
     decrementValue(index) {
       if (this.drugs[index].value > 0) {
