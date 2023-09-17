@@ -107,7 +107,8 @@ export default {
     { name: "urinex tab", type: "number", value: 0 },
     { name: "rowatinex cap", type: "number", value: 0 },
     { name: "kellagon cap", type: "number", value: 0 },
-    { name: "zorcal", type: "number", value: 0 },
+    { name: "zorcal 40 tab", type: "number", value: 0 },
+    { name: "Zorcal 20 tab", type: "number", value: 0 },
     { name: "simecol", type: "number", value: 0 },
     { name: "cal-Mag", type: "number", value: 0 },
     { name: "trib-Gold", type: "number", value: 0 },
@@ -118,6 +119,7 @@ export default {
     { name: "acetylcysteine 600 sachets", type: "number", value: 0 },
     { name: "elica m cream", type: "number", value: 0 },
     { name: "octatron cap", type: "number", value: 0 },
+    { name: "Flector 50", type: "number", value: 0 },
 
     // Add more drugs here
   ],
