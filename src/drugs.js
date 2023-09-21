@@ -72,7 +72,7 @@ export default {
     { name: "wintriaxone 1g", type: "number", value: 0 },
     { name: "xoraxon 1g", type: "number", value: 0 },
     { name: "fortum 1g", type: "number", value: 0 },
-    { name: "amikacin 500 vial", type: "number", value: 0 },
+    { name: "amikacin 500 vial amp", type: "number", value: 0 },
     { name: "vinosin cream", type: "number", value: 0 },
     { name: "marcal tab", type: "number", value: 0 },
     { name: "ferroduonal cap", type: "number", value: 0 },
