@@ -120,6 +120,9 @@ export default {
     { name: "elica m cream", type: "number", value: 0 },
     { name: "octatron cap", type: "number", value: 0 },
     { name: "Flector 50", type: "number", value: 0 },
+        { name: "prostacure cap", type: "number", value: 0 },
+    { name: "albendazole syrup", type: "number", value: 0 },
+    { name: "vermizole syrup", type: "number", value: 0 },
 
     // Add more drugs here
   ],
