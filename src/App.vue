@@ -1,7 +1,7 @@
 <template>
-  <header class="bg-blue-500 p-4">
+  <header class="bg-blue-500 p-4" :class="search ? 'fixed w-full' : ''">
     <div class="container mx-auto flex items-center justify-between">
-      <div class="flex items-center space-x-4">
+      <div class="flex items-center space-x-4" v-if="!search">
         <img
           src="/247-2471138_pharmacy-symbol-hd-png-download.png"
           alt="Pharmacy Logo"
@@ -11,12 +11,34 @@
           M Pharmacy صيدليه د/مؤمن لطفي
         </h1>
       </div>
+      <div
+        v-if="!search"
+        @click="openSearch"
+        class="fixed bottom-20 text-white p-[10px] rounded-xl bg-green-500 text-xl font-semibold"
+      >
+        بحث
+      </div>
+      <div class="flex items-center space-x-4" v-if="search">
+        <input
+          v-model="searchQuery"
+          type="text"
+          placeholder="Search"
+          class="px-4 py-2 rounded-lg"
+        />
+
+        <div
+          @click="closeSearch"
+          class="text-white p-2 rounded-xl bg-red-500 text-xl font-semibold"
+        >
+          اغلاق
+        </div>
+      </div>
     </div>
   </header>
 
-  <div>
+  <div :class="search ? 'pt-[21%]' : ''">
     <div
-      v-for="(drug, index) in drugs"
+      v-for="(drug, index) in filteredDrugs"
       :key="index"
       class="flex items-center justify-between border p-2"
     >
@@ -102,9 +124,18 @@ export default {
   data() {
     return {
       drugs: drugs.drugs,
-      newDrugName: "", // For inputting a new drug name
-      newDrugCount: 0, // For inputting a new drug count
+      newDrugName: "",
+      newDrugCount: 0,
+      search: false,
+      searchQuery: "", // Added search query data property
     };
+  },
+  computed: {
+    filteredDrugs() {
+      return this.drugs.filter((drug) => {
+        return drug.name.toLowerCase().includes(this.searchQuery.toLowerCase());
+      });
+    },
   },
   methods: {
     generatePDF() {
@@ -136,6 +167,13 @@ export default {
       };
       const formattedDate = date.toLocaleDateString(undefined, options);
       pdf.save(`${formattedDate}.pdf`);
+    },
+    openSearch() {
+      this.search = true;
+    },
+    closeSearch() {
+      this.search = false;
+      this.searchQuery = "";
     },
     decrementValue(index) {
       if (this.drugs[index].value > 0) {
