@@ -154,8 +154,7 @@ export default {
     { name: "rowachol tap", type: "number", value: 0 },
     { name: "becozyme amp", type: "number", value: 0 },
     { name: "eposino amp", type: "number", value: 0 },
-    { name: "nitazode syp", type: "number", value: 0 },
-
+    { name: "nitazode syp", type: "number", value: 0 }
     // Add more drugs here
   ],
 };
