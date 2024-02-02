@@ -53,6 +53,7 @@ export default {
     { name: "feburic 80", type: "number", value: 0 },
     { name: "unsiatem 80", type: "number", value: 0 },
     { name: "ambezim", type: "number", value: 0 },
+    { name: "Corvizim tab", type: "number", value: 0 },
     { name: "alphintern", type: "number", value: 0 },
     { name: "Bristaflam tab", type: "number", value: 0 },
     { name: "lornoxicam tab", type: "number", value: 0 },
@@ -156,6 +157,7 @@ export default {
     { name: "becozyme amp", type: "number", value: 0 },
     { name: "eposino amp", type: "number", value: 0 },
     { name: "nitazode syp", type: "number", value: 0 },
+    { name: "prucasoft 2mg tab", type: "number", value: 0 },
 
     // Add more drugs here
   ],
