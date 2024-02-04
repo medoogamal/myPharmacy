@@ -80,6 +80,7 @@ export default {
     { name: "vinosin cream", type: "number", value: 0 },
     { name: "marcal tab", type: "number", value: 0 },
     { name: "ferroduonal cap", type: "number", value: 0 },
+    { name: "tadalong 5", type: "number", value: 0 },
     { name: "starkoprex 5", type: "number", value: 0 },
     { name: "starkoprex 20", type: "number", value: 0 },
     { name: "bone one 0.25", type: "number", value: 0 },
@@ -157,6 +158,7 @@ export default {
     { name: "becozyme amp", type: "number", value: 0 },
     { name: "eposino amp", type: "number", value: 0 },
     { name: "nitazode syp", type: "number", value: 0 },
+    { name: "visralgine tab", type: "number", value: 0 },
     { name: "prucasoft 2mg tab", type: "number", value: 0 },
 
     // Add more drugs here
